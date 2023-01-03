@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #9668f5;
+}
+
+.container{
+    position: relative;
+    max-width: 450px;
+    width: 100%;
+    background: #dfdfeb;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px #5740a0;
+    overflow: hidden;
+    margin: 0 20px;
+}
+
+.container .forms{
+    display: flex;
+    align-items: center;
+    height: 600px;
+    width: 200%;
+    transition: height 0.2s ease;
+}
+
+
+.container .form{
+    width: 50%;
+    padding: 20px 60px;
+    height: 500px;
+    background-color: #dfdfeb;
+    transition: margin-left 0.18s ease;
+}
+
+.container.active .login{
+    margin-left: -50%;
+    opacity: 0;
+    transition: margin-left 0.18s ease, opacity 0.15s ease;
+}
+
+.container .signup{
+    opacity: 0;
+    transition: opacity 0.09s ease;
+    margin-top: -70px;
+}
+.container.active .signup{
+    opacity: 1;
+    transition: opacity 0.2s ease;
+}
+
+.container.active .forms{
+    height: 600px;
+}
+.container .form .login-title{
+    position: relative;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+.container .form .signup-title{
+    position: relative;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 0px;
+}
+
+
+.form .input-field{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.input-field input{
+    position: absolute;
+    bottom: 24px;
+    height: 100%;
+    width: 100%;
+    padding: 0 45px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-radius: 40px;
+    box-shadow: inset 8px 8px 8px #d6d6e6,inset -8px -8px 8px #e7e7ee;
+    background-color: #dfdfeb;
+    transition: all 0.2s ease;
+}
+
+.input-field i{
+    position: absolute;
+    bottom: 15px;
+    transform: translateY(-50%);
+    color: #1d2538;
+    font-size: 23px;
+    transition: all 0.2s ease;
+}
+
+.input-field input:is(:focus, :valid) ~ i{
+    color: #9ea4c3;
+}
+
+.input-field i.icon{
+    left: 3%;
+}
+.input-field i.showHidePw{
+    right: 10px;
+    cursor: pointer;
+    bottom: 15px;
+}
+
+.form .checkbox-text{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.checkbox-text .checkbox-content{
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-content input{
+    margin-right: 10px;
+    accent-color: #696969;
+}
+
+.form .text{
+    color: #696969;
+    font-size: 14px;
+    
+}
+
+.form a.text{
+    color: #2f74c8;
+    text-decoration: none;
+}
+.form a:hover{
+    text-decoration: underline;
+}
+
+.form .button{
+    margin-top: 35px;
+}
+
+.form .button input{
+    
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    box-shadow: none;
+    background-color: #040307;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button input:hover{
+    background-color: #2a293e;
+}
+
+.form .login-lsignup{
+    margin-top: 80px;
+    text-align: center;
+}
+.form .login-ssignup{
+    margin-top: 10px;
+    text-align: center;
+}
+
